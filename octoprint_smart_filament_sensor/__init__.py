@@ -72,7 +72,8 @@ class SmartFilamentSensor(octoprint.plugin.StartupPlugin,
 # Initialization methods
     def _setup_sensor(self):
         # Clean up before intializing again, because ports could already be in use
-        GPIO.cleanup()
+
+#       GPIO.cleanup()
 
         if(self.mode == 0):
             self._logger.info("Using Board Mode")
